@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.discount-label {
+    background-color: #e74c3c; /* Red background color */
+    color: white; /* White text color */
+    padding: 0px 5px; /* Padding around the text */
+    font-size: 12px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Positioning for the arrow effect */
+}
+.discount-label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    transform: translateY(-50%);
+    border-width: 7px 7px 7px 0;
+    border-style: solid;
+    border-color: transparent #e74c3c transparent transparent;
+}
